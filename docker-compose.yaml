@@ -1,0 +1,14 @@
+version: '3'
+
+
+services:
+  db:
+    image: postgres:14-alpine
+    container_name: crypto_db
+    restart: always
+    environment:
+      POSTGRES_DB: crypto_db
+      POSTGRES_USERNAME: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "54325:5432"
